@@ -5,8 +5,8 @@
   "test_settings": {
     "default": {
       "screenshots": {
-        "enabled": true,
-        "on_failure": true,
+        "enabled": false,
+        "on_failure": false,
         "path": "screenshots"
       },
       "videos": {
