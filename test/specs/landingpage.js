@@ -22,7 +22,10 @@ module.exports = {
         .url(function(result) {
                 this.assert.equal(result.value, "https://www.pagevamp.com/#how-it-works");   //scroll to How it work section
                 this.assert.containsText("#how-it-works-section","Website in seconds");     //testing "Website in seconds" text
-                this.assert.attributeContains(".link","data-target","#how-it-works-video");  //testing "Watch it in action" link
+                this.assert.elementPresent("#how-it-works-video"); //testing "Watch it in action" link
+                this.getAttribute("#how-it-works-video iframe", "src",function(result){
+                        this.assert.equal(result.value,"https://www.youtube.com/embed/09Y0Xz_bTpM?enablejsapi=1");
+                });
             })
         .pause(3000)
         .end();
@@ -37,11 +40,6 @@ module.exports = {
                 })
             .waitForElementVisible(".pv-section--center .col-sm-12 .pv-title", 1000)
             .assert.containsText(".pv-title","Pricing")            // testing if page contains "Pricing" text      
-            .click("#topmost-nav a.pv-logo")
-            .url(function(result) {
-                this.assert.equal(result.value, "https://www.pagevamp.com/");
-            })
-            .end();
      },
 
      'Testing if Partners link works': function (browser) {    
@@ -60,10 +58,6 @@ module.exports = {
                 })
             .waitForElementVisible(".pv-section--center .col-sm-12 .pv-title", 1000)
             .assert.containsText(".pv-title","Pagevamp Features")     // testing if feature page header text     
-            .click("#topmost-nav a.pv-logo")
-            .url(function(result) {
-                this.assert.equal(result.value, "https://www.pagevamp.com/");
-            })
             .end();
      },
 
@@ -74,7 +68,6 @@ module.exports = {
              browser.assert.elementPresent("#login-pv-continue")   // Checking "Log in with Facbook" button in modal
              .end();
      },
-
 
     'Testing Get Pagevamp modal popup ': function (browser) {    
         browser.url("https://www.pagevamp.com/")
@@ -94,7 +87,6 @@ module.exports = {
                     .assert.containsText(".dropdown-menu", "Italian")
                     .assert.containsText(".dropdown-menu", "Vietnamese")
                     .assert.containsText(".dropdown-menu", "Thai");
-
             })
              .end();
      }
