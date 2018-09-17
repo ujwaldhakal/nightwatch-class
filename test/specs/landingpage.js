@@ -22,7 +22,6 @@ module.exports = {
         .url(function(result) {
                 this.assert.equal(result.value, "https://www.pagevamp.com/#how-it-works");   //scroll to How it work section
                 this.assert.containsText("#how-it-works-section","Website in seconds");     //testing "Website in seconds" text
-                this.assert.elementPresent("#how-it-works-video"); //testing "Watch it in action" link
                 this.getAttribute("#how-it-works-video iframe", "src",function(result){
                         this.assert.equal(result.value,"https://www.youtube.com/embed/09Y0Xz_bTpM?enablejsapi=1");
                 });
@@ -46,6 +45,9 @@ module.exports = {
         browser.url("https://www.pagevamp.com/")
             .click(".navbar-right li:nth-child(3) a")
             .assert.urlEquals('https://reseller.pagevamp.com/')
+            .getText(".pv-banner h1" , function(result){
+                this.assert.equal(result.value,"Pagevamp Reseller Program")
+            })
             .end();
     },
 
@@ -64,16 +66,20 @@ module.exports = {
     'Testing Login modal popup ': function (browser) {    
         browser.url("https://www.pagevamp.com/")
             .click(".navbar-right li:nth-child(5) a")
-            .expect.element('.modal-content').to.be.present;   // testing Login popup
-             browser.assert.elementPresent("#login-pv-continue")   // Checking "Log in with Facbook" button in modal
-             .end();
+            .waitForElementVisible("#pv-login-modal",1000)
+            .getText("#login-pv-continue", function(result){
+                this.assert.equal(result.value,"Log in with Facebook")
+            })
+            .end();
      },
 
     'Testing Get Pagevamp modal popup ': function (browser) {    
         browser.url("https://www.pagevamp.com/")
             .click(".navbar-right li:nth-child(6) a")
-            .expect.element('.modal-content').to.be.present;   // testing Get Pagevamp popup
-             browser.assert.elementPresent("#login-fb")   // Checking "Continue with Facebook" button in modal
+            .waitForElementVisible("#pv-continue-modal",1000)
+            .getText("#login-fb", function(result){
+                this.assert.equal(result.value,"Continue with Facebook")
+            })
              .end();
      },
 
@@ -81,7 +87,7 @@ module.exports = {
         browser.url("https://www.pagevamp.com/")
             .click(".navbar-right li:nth-child(7) a");
             browser.click(".dropdown-toggle", function(response){    
-                browser.assert.elementPresent(".dropdown-menu")      //checking dropdown toggle
+                browser.assert.visible(".dropdown-menu")      //checking dropdown toggle
                     .assert.containsText(".dropdown-menu", "Spanish")  //checking dropdown menu items
                     .assert.containsText(".dropdown-menu", "Indonesian")
                     .assert.containsText(".dropdown-menu", "Italian")
