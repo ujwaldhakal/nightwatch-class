@@ -120,7 +120,6 @@ module.exports = {
                    .click(".pv-grow-business article a.link")
                    .assert.urlEquals("https://www.pagevamp.com/us/facebook-page-creation-service?lang=EN")
                    .end();
-
     },
 
     'Testing "View all features" link  opens Feature page':function(browser){
