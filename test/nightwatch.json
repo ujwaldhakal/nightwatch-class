@@ -10,7 +10,7 @@
         "path": "screenshots"
       },
       "videos": {
-        "enabled": false,
+        "enabled": true,
         "delete_on_success": false,
         "path": "videos"
       },
