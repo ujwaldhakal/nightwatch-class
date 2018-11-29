@@ -1,21 +1,22 @@
 {
-  "globals_path": "globals.js",
-  "output_folder": false,
-  "src_folders": ["specs"],
-  "test_settings": {
-    "default": {
-      "screenshots": {
-        "enabled": false,
-        "on_failure": false,
-        "path": "screenshots"
-      },
-      "videos": {
-        "enabled": true,
-        "delete_on_success": false,
-        "path": "videos"
-      },
-      "launch_url": "http://nginx",
-      "selenium_host": "chromedriver"
-    }
-  }
+ "globals_path": "globals.js",
+ "output_folder": "reports",
+ "src_folders": ["specs"],
+ "skip_testcases_on_fail" :false,
+ "test_settings": {
+   "default": {
+     "screenshots": {
+       "enabled": true,
+       "on_failure": true,
+       "path": "screenshots"
+     },
+     "videos": {
+       "enabled": true,
+       "delete_on_success": true,
+       "path": "videos"
+     },
+     "launch_url": "https://www.pagevamp.com/",
+     "selenium_host": "chromedriver"
+   }
+ }
 }

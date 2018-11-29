@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="1">
+
+  <testsuite name="resellerAssignment"
+    errors="1" failures="0" hostname="" id="" package="resellerAssignment" skipped="0"
+    tests="1" time="0.02300" timestamp="Tue, 04 Dec 2018 04:46:16 GMT">
+  
+    <testcase name="Testing user Login" classname="resellerAssignment" time="0.02300" assertions="0">
+    </testcase>
+  
+
+  
+    <system-err>
+        Error while running [Reseller Assignment / Testing user Login]:
+
+  TypeError: Cannot read property &#39;then&#39; of undefined
+    at Object.TestingUserLogin [as Testing user Login] (/home/node/specs/resellerAssignment.js:9:13)
+    at Module.call (/usr/lib/node_modules/nightwatch/lib/runner/module.js:62:34)
+    at /usr/lib/node_modules/nightwatch/lib/runner/testcase.js:70:29
+    at _fulfilled (/usr/lib/node_modules/nightwatch/node_modules/q/q.js:834:54)
+    at self.promiseDispatch.done (/usr/lib/node_modules/nightwatch/node_modules/q/q.js:863:30)
+    at Promise.promise.promiseDispatch (/usr/lib/node_modules/nightwatch/node_modules/q/q.js:796:13)
+    at /usr/lib/node_modules/nightwatch/node_modules/q/q.js:556:49
+    at runSingle (/usr/lib/node_modules/nightwatch/node_modules/q/q.js:137:13)
+    at flush (/usr/lib/node_modules/nightwatch/node_modules/q/q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    </system-err>
+  
+
+  
+  </testsuite>
+</testsuites>
