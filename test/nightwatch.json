@@ -14,7 +14,7 @@
         "delete_on_success": false,
         "path": "videos"
       },
-      "launch_url": "http://nginx",
+      "launch_url": "http://home.pagevamp.pv",
       "selenium_host": "chromedriver"
     }
   }

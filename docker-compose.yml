@@ -1,19 +1,26 @@
-version: '2'
+version: '2.2'
 services:
   nginx:
+    container_name: nginx
     image: nginx:alpine
     volumes:
       - ./app:/usr/share/nginx/html
+    networks:
+      - pagevamp
   chromedriver:
+    container_name: chromedriver
     image: blueimp/chromedriver
     environment:
       - VNC_ENABLED=true
       - EXPOSE_X11=true
     ports:
       - 5900:5900
+    networks:
+      - pagevamp
   nightwatch:
+    container_name: nightwatch
     image: blueimp/nightwatch:0.9
-#    init: true
+    init: true
     depends_on:
       - chromedriver
       - nginx
@@ -21,3 +28,9 @@ services:
       - WAIT_FOR_HOSTS=nginx:80 chromedriver:4444 chromedriver:6060
     volumes:
       - ./test:/home/node
+
+    networks:
+      - pagevamp
+networks:
+  pagevamp:
+    external: true
