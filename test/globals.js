@@ -1,4 +1,7 @@
+require('babel-register')();
+require('env2')('.env');
 'use strict'
+
 
 module.exports = {
   beforeEach: function (browser, done) {
