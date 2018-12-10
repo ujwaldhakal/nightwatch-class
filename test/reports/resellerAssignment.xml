@@ -5,18 +5,18 @@
 
   <testsuite name="resellerAssignment"
     errors="1" failures="0" hostname="" id="" package="resellerAssignment" skipped="0"
-    tests="1" time="0.02300" timestamp="Tue, 04 Dec 2018 04:46:16 GMT">
+    tests="1" time="0.07300" timestamp="Mon, 10 Dec 2018 10:40:28 GMT">
   
-    <testcase name="Testing user Login" classname="resellerAssignment" time="0.02300" assertions="0">
+    <testcase name="Testing Reseller Assignment" classname="resellerAssignment" time="0.07300" assertions="0">
     </testcase>
   
 
   
     <system-err>
-        Error while running [Reseller Assignment / Testing user Login]:
+        Error while running [Reseller Assignment / Testing Reseller Assignment]:
 
-  TypeError: Cannot read property &#39;then&#39; of undefined
-    at Object.TestingUserLogin [as Testing user Login] (/home/node/specs/resellerAssignment.js:9:13)
+  TypeError: re.findReseller is not a function
+    at Object.TestingResellerAssignment [as Testing Reseller Assignment] (/home/node/specs/resellerAssignment.js:23:24)
     at Module.call (/usr/lib/node_modules/nightwatch/lib/runner/module.js:62:34)
     at /usr/lib/node_modules/nightwatch/lib/runner/testcase.js:70:29
     at _fulfilled (/usr/lib/node_modules/nightwatch/node_modules/q/q.js:834:54)

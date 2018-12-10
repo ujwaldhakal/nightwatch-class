@@ -5,9 +5,9 @@
 
   <testsuite name="resellerAssignment"
     errors="0" failures="0" hostname="" id="" package="resellerAssignment" skipped="0"
-    tests="1" time="14.47" timestamp="Tue, 04 Dec 2018 07:42:44 GMT">
+    tests="1" time="31.39" timestamp="Mon, 10 Dec 2018 11:22:42 GMT">
   
-    <testcase name="Testing user Login" classname="resellerAssignment" time="14.47" assertions="3">
+    <testcase name="Testing Reseller Assignment" classname="resellerAssignment" time="31.39" assertions="3">
 
     
 

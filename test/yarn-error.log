@@ -1,0 +1,49 @@
+Arguments: 
+  /usr/bin/nodejs/bin/node /usr/bin/yarn add namshi-node-mysql
+
+PATH: 
+  /usr/bin/nodejs/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-9-oracle/bin:/usr/lib/jvm/java-9-oracle/db/bin
+
+Yarn version: 
+  1.12.3
+
+Node version: 
+  9.8.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: EACCES: permission denied, mkdir '/var/www/nightwatch-class/test/node_modules/ansicolors'
+
+npm manifest: 
+  {
+    "name": "blueimp-nightwatch-example",
+    "private": true,
+    "version": "0.0.0",
+    "main": "globals.js",
+    "dependencies": {
+      "axios": "^0.18.0",
+      "babel-core": "^6.26.3",
+      "babel-runtime": "^6.26.0",
+      "core-js": "^2.5.7",
+      "env2": "^2.1.1",
+      "ffmpeg": "0.0.4",
+      "mysql": "^2.15.0",
+      "nightwatch-video-recorder": "1.1.0",
+      "node-tesseract": "^0.2.7",
+      "promise": "^8.0.2"
+    },
+    "devDependencies": {
+      "babel-core": "^6.26.3",
+      "babel-plugin-add-module-exports": "^0.2.1",
+      "babel-preset-es2015": "^6.24.1",
+      "babel-register": "^6.26.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
