@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="1">
+
+  <testsuite name="trackingCodeReseller"
+    errors="0" failures="0" hostname="" id="" package="trackingCodeReseller" skipped="0"
+    tests="1" time="22.57" timestamp="Tue, 18 Dec 2018 11:37:36 GMT">
+  
+    <testcase name="Testing if new user vamps from tracking code, user is assigned to that reseller" classname="trackingCodeReseller" time="22.57" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

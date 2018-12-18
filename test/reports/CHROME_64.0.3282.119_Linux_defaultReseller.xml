@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="1">
+
+  <testsuite name="defaultReseller"
+    errors="0" failures="0" hostname="" id="" package="defaultReseller" skipped="0"
+    tests="1" time="61.08" timestamp="Tue, 18 Dec 2018 11:36:33 GMT">
+  
+    <testcase name="Testing if new user vamps from pagevamp landing page, user is assigned to country default Reseller" classname="defaultReseller" time="61.08" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>
