@@ -1,4 +1,5 @@
 'use strict'
+require('env2')('.env');
 
 module.exports = {
   beforeEach: function (browser, done) {
