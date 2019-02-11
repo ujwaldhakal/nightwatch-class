@@ -5,9 +5,9 @@
 
   <testsuite name="trackingCodeReseller"
     errors="0" failures="0" hostname="" id="" package="trackingCodeReseller" skipped="0"
-    tests="1" time="22.57" timestamp="Tue, 18 Dec 2018 11:37:36 GMT">
+    tests="1" time="54.98" timestamp="Wed, 09 Jan 2019 09:30:30 GMT">
   
-    <testcase name="Testing if new user vamps from tracking code, user is assigned to that reseller" classname="trackingCodeReseller" time="22.57" assertions="3">
+    <testcase name="Testing if new user vamps from tracking code, user is assigned to that reseller" classname="trackingCodeReseller" time="54.98" assertions="3">
 
     
 

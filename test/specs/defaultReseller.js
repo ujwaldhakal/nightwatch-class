@@ -1,4 +1,4 @@
-import mysql from 'mysql';
+mport mysql from 'mysql';
 import mysqlProvider from '../services/mysql';
 
 import user from '../services/deleteUser';
@@ -24,21 +24,23 @@ module.exports = {
                     });
 
                     browser.perform(async ()=> {
-                      let r = await reseller.findReseller('rajeshwor.giri@gmail.com');
-                      if(r.reseller_id==210){
-                        console.log('PASS: User is assigned to default reseller:' + r.reseller_id);
+                      let defaultReseller = await reseller.findReseller('rajeshwor.giri@gmail.com');
+                      if(defaultReseller.reseller_id==210){
+                        console.log('PASS: User is assigned to default reseller:' + defaultReseller.reseller_id);
                         user2.deleteUser();
+                        browser.end();
                       }else{
-                        console.log('FAIL : User is assigned to different reseller:' + r.reseller_id);
+                        console.log('FAIL : User is assigned to different reseller:' + defaultReseller.reseller_id);
                         user2.deleteUser();
-
+                        browser.end();
                       }
                       
                    }) 
-                    browser.end();
+                  
 
 
           }           
 }
+
 
 

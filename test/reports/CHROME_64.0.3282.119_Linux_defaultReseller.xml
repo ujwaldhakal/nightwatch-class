@@ -5,9 +5,9 @@
 
   <testsuite name="defaultReseller"
     errors="0" failures="0" hostname="" id="" package="defaultReseller" skipped="0"
-    tests="1" time="61.08" timestamp="Tue, 18 Dec 2018 11:36:33 GMT">
+    tests="1" time="67.55" timestamp="Wed, 09 Jan 2019 09:29:02 GMT">
   
-    <testcase name="Testing if new user vamps from pagevamp landing page, user is assigned to country default Reseller" classname="defaultReseller" time="61.08" assertions="3">
+    <testcase name="Testing if new user vamps from pagevamp landing page, user is assigned to country default Reseller" classname="defaultReseller" time="67.55" assertions="3">
 
     
 
